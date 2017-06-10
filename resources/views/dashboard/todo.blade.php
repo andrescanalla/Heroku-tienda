@@ -33,7 +33,9 @@
             @if ($to->todo=="3") 
               <tr class="danger"> 
             @elseif ($to->todo=="2") 
-              <tr class="warning">              
+              <tr class="warning">
+            @elseif ($to->todo=="4") 
+              <tr class="info">              
             @else
               <tr>
             @endif            
@@ -64,7 +66,7 @@
                                    
                                   <div class="form-group">
                                     <label >Importancia</label>     
-                                      {!! Form::select('todo',['1' => 'Normal', '2' => 'Media', '3' => 'Alta'], $to->todo,['class'=>'form-control'])!!} 
+                                      {!! Form::select('todo',['1' => 'Normal', '2' => 'Media', '3' => 'Alta','4'=>'Calendario'], $to->todo,['class'=>'form-control'])!!} 
                                      <label for="message-text">Tarea</label>
                                     <textarea class="form-control" name="comentarios" rows="4">{{$to->comment}}</textarea>
                                      <div class="form-group form-inline">

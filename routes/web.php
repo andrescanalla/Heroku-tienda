@@ -54,6 +54,7 @@ Route::post('dashboard/update2', 'DashController@todo');
 Route::get('dashboard/update2', 'DashController@todo');
 Route::get('dashboard/cale', 'DashController@cale');
 Route::get('dashboard/calr', 'DashController@calr');
+Route::get('dashboard/calc', 'DashController@calc');
 Route::resource('dashboard','DashController');
 #Route::get('compra/actual2', 'ActualController@show');
 

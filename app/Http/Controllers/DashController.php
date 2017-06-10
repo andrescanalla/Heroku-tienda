@@ -317,4 +317,30 @@ class DashController extends Controller
                     }    
         }
     }
+     public function calc(Request $request){
+        if ($request->get('type')==null){
+              $calc=DB::table('dash')
+                ->where('end','!=',null)
+                ->where('todo','=',4)
+                ->select('start', 'end','comment as title','iddash as id')
+                ->get(); 
+            return Response::json($calc); 
+        }
+        else {
+            $type = $request->get('type');
+                if($type == 'new')
+                    {
+                        $event= new Dash;
+                        $event->comment=$request->get('title');
+                        $event->start = Carbon::now();
+                        $event->fecha = Carbon::now();
+                        $event->end = Carbon::now()->addHour();
+                        $event->todo =4;
+                        $event->save();
+                                              
+                        echo json_encode(array('status'=>'success'));               
+                    }
+                 
+        }
+    }
 }

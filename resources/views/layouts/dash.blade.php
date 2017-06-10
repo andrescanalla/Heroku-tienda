@@ -207,17 +207,17 @@ $(document).ready(function() {
         // put your options and callbacks here
         customButtons: {
             myCustomButton: {
-                text: '+',
+                text: 'C',
                 click: function(event) {
                     var title = 'Nuevo Evento';
                     $.ajax({
-                      url: 'http://tienda.ar/cal',
+                      url: 'http://tienda.ar/dashboard/calc',
                       data: 'type=new&title='+title,
                       type: 'GET',
                       dataType: 'json',
                       success: function(response){
                         event.id = response.eventid;
-                        $('#calendar').fullCalendar('refetchEventSources',{googleCalendarId: 'tevhjs8d5nfk9l79iqme6ervek@group.calendar.google.com'});
+                        $('#calendar').fullCalendar('refetchEventSources',{url: 'dashboard/calc'});
                       },
                       error: function(e){
                         console.log(e.responseText);
@@ -323,6 +323,17 @@ $(document).ready(function() {
             startEditable: true,
             endEditable: true,
             durationEditable: true,
+            }
+            ,
+            {
+            url: 'dashboard/calc',
+            className: 'nice-event', 
+            color: 'blue',
+            textColor:'black',
+            editable: true,
+            startEditable: true,
+            endEditable: true,
+            durationEditable: true,
             },
             {
             url: 'dashboard/calr',
@@ -361,7 +372,7 @@ $(document).ready(function() {
               }
             });
           }
-           if(event.source.color=='green'){
+           if(event.source.color=='green'||event.source.color=='blue'){
         console.log(event.source.color);
         var title = event.title;
         var end = event.end.format();
@@ -420,7 +431,7 @@ $(document).ready(function() {
                 }
            });
         }
-        if(event.source.color=='green'){
+        if(event.source.color=='green'|| event.source.color=='blue'){
             $.ajax({
               url: 'http://tienda.ar/dashboard/cale',
               data: 'type=resetdate&start='+start+'&end='+end+'&eventid='+event.id,
@@ -477,7 +488,7 @@ $(document).ready(function() {
                       return false;
                   }
           }
-          if(event.source.color=='green'){
+          if(event.source.color=='green' ||event.source.color=='blue'){
                $.ajax({
                  url: 'http://tienda.ar/dashboard/cale',
                  data: 'type=changetitle&title='+title+'&eventid='+event.id,
@@ -541,6 +552,7 @@ $(document).ready(function() {
                           if(response.status == 'success'){
                              $('#calendar').fullCalendar('refetchEventSources',{url: 'dashboard/cale'});
                               $('#calendar').fullCalendar('refetchEventSources',{url: 'dashboard/calr'});
+                               $('#calendar').fullCalendar('refetchEventSources',{url: 'dashboard/calc'});
                               
                               }
                         },
