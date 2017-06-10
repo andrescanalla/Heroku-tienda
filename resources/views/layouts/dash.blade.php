@@ -329,7 +329,7 @@ $(document).ready(function() {
             url: 'dashboard/calc',
             className: 'nice-event', 
             color: 'blue',
-            textColor:'black',
+            textColor:'white',
             editable: true,
             startEditable: true,
             endEditable: true,
