@@ -50,8 +50,7 @@
         <tr>
           <td>{{$per->idventa}}</td>
           <td>{{\App\Pedidos::fechain($per->fecha)}}</td>
-          <td><span data-toggle="modal" data-target="#uModal{{$nx}}" href="/ventas/cliente/{{$per->idpersona}}">{{$per->usuario}}</span></td>
-                 
+          <td><span data-toggle="modal" data-target="#uModal{{$nx}}" href="/ventas/cliente/{{$per->idpersona}}">{{$per->usuario}}</span></td>                 
           <td style="text-align: center">{{$per->cant}}</td>
           <td style="text-align: center">$ {{number_format($per->precio,0,',','.')}}</td>
           <td>@if ($per->id_pedidos==1)
