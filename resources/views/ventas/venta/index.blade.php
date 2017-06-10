@@ -35,8 +35,7 @@
         <thead style="background-color:#A9D0F5">
           <th>id</th>
           <th>Fecha</th>
-          <th>Usuario</th>
-                   
+          <th>Usuario</th>                   
           <th style="text-align: center">Cantidad</th>
           <th style="text-align: center">Total</th>
           <th>Tipo</th>
