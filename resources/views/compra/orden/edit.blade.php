@@ -67,8 +67,7 @@
     <div class="col-lg-2 col-sm-6 col-md-6 col-xs-12">
       <div class="form-group" style="padding-top:25px">
         <a href="{{ url()->previous() }}" class="btn btn-default" type="reset">Cancelar</a>
-         <button class="btn btn-primary" type="submit">Guardar</button>
-         
+         <button class="btn btn-primary" type="submit">Guardar</button>         
       </div>
      </div>
   </div>
