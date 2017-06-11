@@ -14,10 +14,8 @@
        <span style="font-size:15px">Tipo</span>     
        {!! Form::select('tipo',$tipo,null,['class'=>'form-control','id'=>'tipo'])!!}
         <span style="font-size:15px">Estado </span>
-     {!! Form::select('estado',$estado,null,['class'=>'form-control','id'=>'estado'])!!}
-         
-     
-    </div>
+     {!! Form::select('estado',$estado,null,['class'=>'form-control','id'=>'estado'])!!}        
+     </div>
     {{Form::close()}}
   </div>
   </div> 
