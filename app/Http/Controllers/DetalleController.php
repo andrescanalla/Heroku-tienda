@@ -72,6 +72,7 @@ class DetalleController extends Controller
           ->where('do.iddetalleorden',$request->get('id'))
           ->get();
 
+
         foreach ($venta as $key) {
             $ven[]=$key->usuario;
           }
@@ -80,6 +81,7 @@ class DetalleController extends Controller
           ->select('p.imagen')
           ->where('do.iddetalleorden',$request->get('id'))
           ->first();
+          
         return view("ventas.venta.venta", ["venta"=>$venta,"img"=>$img]);
         #Return response()->json($ven);
       }

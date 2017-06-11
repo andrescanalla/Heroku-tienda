@@ -206,7 +206,7 @@ $(document).ready(function() {
     "columnDefs": [ 
             
             {
-                "targets": [ 10 ],
+                "targets": [ 9 ],
                 "orderable": false,
             }    
         ]

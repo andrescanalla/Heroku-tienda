@@ -9,52 +9,8 @@
 @section ('contenido')
 <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
 @include ('dashboard.todo')
-@include ('dashboard.stock')
-</div>    
-<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-  <div class="row">
-    <div class="panel panel-success"style="margin-left:15px;margin-bottom:0px">
-      <div class="panel-heading">Ventas<i class="fa fa-bar-chart pull-right" style="padding-top:4px"></i></div>
-      <div class="panel-body"> 
-        {!! $chartjs1->render() !!}
-        <div class="text-color"><hr>
-        </div>
-        {!! $chartjs2->render() !!}   
-      </div>
-      </div>
-  </div>  
-</div>
-<div class="col-lg-5 col-md-4 col-sm-4 col-xs-12" style="padding-right:0">
-    <div class="col-lg-6 col-md-4 col-sm-4 col-xs-12" style="padding:0">
-      <div class="panel panel-success">
-        <div class="panel-heading">
-          <div class="row" >
-            <div class="col-lg-10 col-md-4 col-sm-4 col-xs-12">
-              Ventas por Entregar <i class="fa fa-motorcycle pull-right" style="padding-top:4px"></i>
-            </div>
-            <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
-              <span class="badge pull-right">{{$vtacon+$vtapcon}}</span>
-            </div>
-        </div>
-        </div>
-        <div class="panel-body">
-          <ul class="list-group" style="margin-bottom:0">
-            <a href="/ventas/venta?tipo=&estado=Contactada">
-        <li class="list-group-item list-group-item-warning" >
-          <span class="badge">{{$vtacon}}</span>
-         Contactadas
-        </li></a>
-        <a href="/ventas/venta?tipo=&estado=Confirmada">
-        <li class="list-group-item list-group-item-warning">
-          <span class="badge">{{$vtapcon}}</span>
-         Por Contactar
-        </li></a>
-        </ul>         
-        </div>
-        </div>
-    </div>  
-    <div class="col-lg-6 col-md-4 col-sm-4 col-xs-12" style="padding-right:0" id="trash"> 
-     <div class="panel panel-primary"> 
+
+<div class="panel panel-primary"> 
       <div class="panel-heading">
         <div class="row">
         <div class="col-lg-10 col-md-4 col-sm-4 col-xs-12"> 
@@ -76,6 +32,51 @@
          </div><!-- /.info-box -->
         </div>
       </div>
+</div>    
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+  <div class="row">
+    <div class="panel panel-success"style="margin-left:15px;margin-bottom:0px">
+      <div class="panel-heading">Ventas<i class="fa fa-bar-chart pull-right" style="padding-top:4px"></i></div>
+      <div class="panel-body"> 
+        {!! $chartjs1->render() !!}
+        <div class="text-color"><hr>
+        </div>
+        {!! $chartjs2->render() !!}   
+      </div>
+      </div>
+  </div>  
+</div>
+<div class="col-lg-5 col-md-4 col-sm-4 col-xs-12" style="padding-right:0">
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" style="padding:0">
+      <div class="panel panel-success" style="margin-bottom: 15px">
+        <div class="panel-heading">
+          <div class="row" >
+            <div class="col-lg-9 col-md-4 col-sm-4 col-xs-12">
+              Entrega <i class="fa fa-motorcycle pull-right" style="padding-top:4px"></i>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+              <span class="badge pull-right">{{$vtacon+$vtapcon}}</span>
+            </div>
+        </div>
+        </div>
+        <div class="panel-body">
+          <ul class="list-group" style="margin-bottom:0">
+            <a href="/ventas/venta?tipo=&estado=Contactada">
+        <li class="list-group-item list-group-item-warning" >
+          <span class="badge">{{$vtacon}}</span>
+         Contactadas
+        </li></a>
+        <a href="/ventas/venta?tipo=&estado=Confirmada">
+        <li class="list-group-item list-group-item-warning">
+          <span class="badge">{{$vtapcon}}</span>
+         Por Contactar
+        </li></a>
+        </ul>         
+        </div>
+        </div>
+    </div>  
+    <div class="col-lg-8 col-md-4 col-sm-4 col-xs-12" style="" id="trash"> 
+     @include ('dashboard.stock')
     </div>  
     <div class="col-lg-12 col-md-4 col-sm-4 col-xs-12">
       <div class="row">
