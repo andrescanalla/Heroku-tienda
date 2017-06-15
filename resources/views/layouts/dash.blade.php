@@ -4,34 +4,31 @@
 <script src="{{asset('js/Chart.bundle.min.js')}}"></script>
 
 @endpush
-@section ('titulo')  Dashboard
+@section ('titulo')  
+<div class="col-lg-6 col-md-4 col-sm-4 col-xs-12" style="margin-top: -3px">
+<span>Dashboard</span>
+ </div>  
+ 
+ <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 " style="margin-top: -3px">
+   <span class="pull-right" style="font-size: 22px">Facebook</span>
+</div>
+
+<h4>
+ <div class="col-lg-1 col-md-4 col-sm-4 col-xs-12 " style="margin-top: 4px">
+   <span style="margin-left: 20px"><i class="fa fa-envelope-o"></i>        </span>
+   <span class="badge" style="margin-top: -3px; margin-left: 10px">5</span>
+</div>  
+<div class="col-lg-1 col-md-4 col-sm-4 col-xs-12 " style="margin-top: 4px">
+  <span><i class="fa fa-thumbs-up"></i></span> 
+  <span class="pull-right">5.235</span>           
+ </div>
+ </h4>
 @endsection
 @section ('contenido')
 <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
 @include ('dashboard.todo')
 
-<div class="panel panel-primary"> 
-      <div class="panel-heading">
-        <div class="row">
-        <div class="col-lg-10 col-md-4 col-sm-4 col-xs-12"> 
-        Facebook<i class="fa fa-envelope-o pull-right"></i>
-        </div>
-        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
-           <span class="badge pull-right">5</span>
-        </div>   
-      </div>
-      </div>   
-        <div class="panel-body" style="padding:0"> 
-         <div class="info-box panel-body" style="margin:0;padding-top:12px;padding-bottom:12px">
-            <!-- Apply any bg-* class to to the icon to color it -->
-            <span class="info-box-icon bg-blue"><i class="fa fa-thumbs-up"></i></span>
-            <div class="info-box-content"style="margin-top:20px">
-              <span class="info-box-text">Likes</span>
-              <span class="info-box-number">93,139</span>
-            </div><!-- /.info-box-content -->
-         </div><!-- /.info-box -->
-        </div>
-      </div>
+
 </div>    
 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
   <div class="row">

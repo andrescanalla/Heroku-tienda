@@ -14,7 +14,7 @@
        <!-- Modal new Pedido-->
       @include ('dashboard.modal.createpedido')  
                                
-  <div class="panel-body" style="padding-top:0; min-height:408px">
+  <div class="panel-body" style="padding-top:0; min-height:620px">
       <div class="tab-content"> 
         <div class="tab-pane fade in active" id="tab1default">          
         <div class="table-responsive">
